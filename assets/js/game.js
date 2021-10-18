@@ -80,9 +80,27 @@ var fight = function (enemyName){
 }
 
 for (var i = 0; i < enemyNames.length; i++){
-    //call fight function with enemy-robot
+    // let players know the round they are in
+    if (playerHealth > 0){
+        window.alert("Welcome to Robot Galdiators! Round " + (i+1) );
+    }
+
+    else {
+        window.alert ("You have lost your robot in battle! Game Over!");
+        break;
+    }
+
     var pickedEnemyName = enemyNames[i];
+
+    //reset enemy health before starting a new fight
     enemyHealth = 50;
+
+    //use debugger to pause script from running
+    debugger;
+
+    //call fight function with enemy-robot
     fight(pickedEnemyName);
+
+    
 }
 
